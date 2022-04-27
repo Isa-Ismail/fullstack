@@ -1,0 +1,41 @@
+{
+  "name": "cappuccino",
+  "version": "1.0.0",
+  "description": "a local coffee shop finder",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isa-Ismail/cappuccino.git"
+  },
+  "author": "Isa-Ismail",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Isa-Ismail/cappuccino/issues"
+  },
+  "homepage": "https://github.com/Isa-Ismail/cappuccino#readme",
+  "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.4.4",
+    "@mui/lab": "^5.0.0-alpha.71",
+    "@mui/material": "^5.4.4",
+    "@mui/styles": "^5.4.4",
+    "axios": "^0.26.1",
+    "next": "^12.1.0",
+    "notistack": "^2.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "unsplash-js": "^7.0.15"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23"
+  }
+}
