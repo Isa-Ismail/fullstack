@@ -4,7 +4,7 @@
   "description": "a local coffee shop finder",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
