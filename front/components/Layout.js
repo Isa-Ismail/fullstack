@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from 'next/link'
 
 const Layout = ({ children, title, description }) => {
     return(
@@ -10,19 +11,27 @@ const Layout = ({ children, title, description }) => {
             
             {/* this is the appbar */}
             <nav className="flex space-x-10 px-16 py-4">
-                <div>
-                    <h1>logo</h1>
-                </div>
+                <Link href="/">
+                    <button>
+                        <h1>logo</h1>
+                    </button>
+                </Link>
                 <div className="flex-grow"></div>
-                <div>
-                    <h2>link</h2>
-                </div>
-                <div>
-                    <h2>link</h2>
-                </div>
-                <div>
-                    <h2>link</h2>
-                </div>
+                <Link href="/">
+                    <button>
+                        <h2>logo</h2>
+                    </button>
+                </Link>
+                <Link href="/signup">
+                    <button>
+                        <h2>Sign Up</h2>
+                    </button>
+                </Link>
+                <Link href="/signin">
+                    <button>
+                        <h2>Sign in</h2>
+                    </button>
+                </Link>
             </nav>
             {/* this is the appbar */}
 
