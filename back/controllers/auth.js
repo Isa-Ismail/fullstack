@@ -46,7 +46,7 @@ exports.signin = async (req, res) => {
     const payload = {
         _id: user._id
     }
-    //jwt processing -> jwt.sign({ payload, secret, expiryDate})
+    //jwt processing -> jwt.sign( payload, secret,{ expiryDate })
     const token = jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '1d'})
     res.cookie('token', token, {expiresIn: '1d'})
     //if success then send token
