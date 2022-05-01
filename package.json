@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node back/server",
     "server": "nodemon back/server",
-    "client": "npm dev --prefix front"
+    "client": "cd front && npm run dev"
   },
   "author": "Isa Mohammad Ismail",
   "license": "MIT",
