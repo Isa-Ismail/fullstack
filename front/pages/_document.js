@@ -21,6 +21,8 @@ export default class MyDocument extends Document {
   }
 }
 
+//this can break dynamic routing in my app
+
 MyDocument.getInitialProps = async (ctx) => {
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;

@@ -3,6 +3,7 @@ import { Button } from '@mui/material';
 import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Link from 'next/link'
+import { signup } from "../actions/auth";
 
 const Signup = () => {
 
@@ -12,10 +13,16 @@ const Signup = () => {
       setForm({...form, [e.target.name]: e.target.value})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
       e.preventDefault()
-      if(form.password === form.confirmPassword){
-          alert("success")
+      if(form.password === form.confirmPassword&&form.email&&form.name&&form.password){
+          const user = {
+            name: form.name,
+            email: form.email,
+            password: form.password
+          }
+          const data = await signup(user)
+          console.log(data)
       }else{
           alert("Password didn't matched")
       }
@@ -27,7 +34,6 @@ const Signup = () => {
             <div className="w-[30rem] space-y-5">
 
                 <h2>Sign Up</h2>
-
                 <div>
                 <TextField
                 fullWidth
@@ -46,6 +52,7 @@ const Signup = () => {
                 fullWidth
                 id="outlined-multiline-flexible"
                 label="email"
+                type="email"
                 multiline
                 maxRows={4}
                 name="email"
@@ -59,9 +66,8 @@ const Signup = () => {
                 fullWidth
                 id="outlined-multiline-flexible"
                 label="password"
-                multiline
-                maxRows={4}
                 name="password"
+                type="password"
                 value={form.password}
                 onChange={handleChange}
                 />
@@ -70,17 +76,16 @@ const Signup = () => {
                 <div>
                 <TextField
                 fullWidth
-                id="outlined-multiline-flexible"
+                id="outlined-flexible"
                 label="Confirm password"
-                multiline
-                maxRows={4}
                 name="confirmPassword"
+                type="password"
                 value={form.confirmPassword}
                 onChange={handleChange}
                 />
                 </div>
 
-            <Button variant="contained" color="success" onClick={handleSubmit}>Submit</Button>
+                <Button variant="contained" type="submit" color="success" onClick={handleSubmit}>Submit</Button>
             
             </div>
           </div>

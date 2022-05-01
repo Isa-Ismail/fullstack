@@ -1,12 +1,13 @@
 import Layout from '../components/Layout'
 import Banner from '../components/Banner'
 import Testimonial from '../components/Testimonial'
+import { APP_NAME } from '../config'
 
 const Home = ({coffeeStores}) => {
     
     return(
         <>
-        <Layout description="Home page practice" title="we are the champions of the world">
+        <Layout description="Home page practice" title={APP_NAME}>
             
             <main className='flex flex-col'>
                 
