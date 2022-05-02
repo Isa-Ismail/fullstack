@@ -31,8 +31,7 @@ const Signup = () => {
   return (
         <Layout>
           <div className="flex justify-center items-center">
-            <div className="w-[30rem] space-y-5">
-
+            <form onSubmit={handleSubmit} className="w-[30%] space-y-5">
                 <h2>Sign Up</h2>
                 <div>
                 <TextField
@@ -85,9 +84,9 @@ const Signup = () => {
                 />
                 </div>
 
-                <Button variant="contained" type="submit" color="success" onClick={handleSubmit}>Submit</Button>
+                <Button variant="contained" type="submit" color="success">Submit</Button>
             
-            </div>
+            </form>
           </div>
         </Layout>
   )
