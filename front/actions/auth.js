@@ -1,5 +1,5 @@
 import fetch from "isomorphic-fetch"
 
-export const signup = (user) => {
-    console.log("hello")
+export const signup = async (user) => {
+    console.log(user)
 }
